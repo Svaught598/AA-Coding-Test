@@ -1,0 +1,10 @@
+.content {
+    max-width: 50%;
+    margin: 0 auto;
+}
+
+.title {
+    font-size: x-large;
+    font-weight: 800;
+    padding-bottom: 1rem;
+}
