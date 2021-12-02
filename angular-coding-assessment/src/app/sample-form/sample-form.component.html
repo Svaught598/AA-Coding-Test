@@ -2,25 +2,25 @@
     <!-- All errors in form -->
     <div *ngIf="badSubmit">
         <p class="error-group">Errors:</p>
-        <div *ngIf="password?.invalid && (password?.dirty || password?.touched)" class="error-group">
-            <span *ngIf="password?.errors?.minlength">
+        <div *ngIf="form.controls['password']?.invalid && (form.controls['password']?.dirty || form.controls['password']?.touched)" class="error-group">
+            <span *ngIf="form.controls['password']?.errors?.minlength">
                 <i>*Password must be at least 8 characters long.</i>
             </span>
-            <span *ngIf="password?.errors?.required">
+            <span *ngIf="form.controls['password']?.errors?.required">
                 <i>*Password is required.</i>
             </span>
-            <span *ngIf="password?.errors?.needsSpecial">
+            <span *ngIf="form.controls['password']?.errors?.needsSpecial">
                 <i>*Password must include at least 1 special character.</i>
             </span>
-            <span *ngIf="password?.errors?.needsUpper">
+            <span *ngIf="form.controls['password']?.errors?.needsUpper">
                 <i>*Password must include at least 1 upper case letter.</i>
             </span>
         </div>
-        <div *ngIf="email?.invalid && (email?.dirty || email?.touched)" class="error-group">
-            <span *ngIf="email?.errors?.required">
+        <div *ngIf="form.controls['email']?.invalid && (form.controls['email']?.dirty || form.controls['email']?.touched)" class="error-group">
+            <span *ngIf="form.controls['email']?.errors?.required">
                 <i>*Email is required.</i>
             </span>
-            <span *ngIf="email?.errors?.email">
+            <span *ngIf="form.controls['email']?.errors?.email">
                 <i>*Email address is not valid.</i>
             </span>
         </div>
@@ -33,11 +33,11 @@
             <input formControlName="email" id="email" name="email" type="text">
 
             <!-- Error messages -->
-            <div *ngIf="email?.invalid && (email?.dirty || email?.touched)" class="error-group">
-                <span *ngIf="email?.errors?.required">
+            <div *ngIf="form.controls['email']?.invalid && (form.controls['email']?.dirty || form.controls['email']?.touched)" class="error-group">
+                <span *ngIf="form.controls['email']?.errors?.required">
                     <i>*Email is required.</i>
                 </span>
-                <span *ngIf="email?.errors?.email">
+                <span *ngIf="form.controls['email']?.errors?.email">
                     <i>*Email address is not valid.</i>
                 </span>
             </div>
@@ -61,17 +61,17 @@
             <input formControlName="password" id="password" name="password" type="password">
 
             <!-- Render errors after user stops typing -->
-            <div *ngIf="password?.invalid && (password?.dirty || password?.touched)" class="error-group">
-                <span *ngIf="password?.errors?.minlength">
+            <div *ngIf="form.controls['password']?.invalid && (form.controls['password']?.dirty || form.controls['password']?.touched)" class="error-group">
+                <span *ngIf="form.controls['password']?.errors?.minlength">
                     <i>*Password must be at least 8 characters long.</i>
                 </span>
-                <span *ngIf="password?.errors?.required">
+                <span *ngIf="form.controls['password']?.errors?.required">
                     <i>*Password is required.</i>
                 </span>
-                <span *ngIf="password?.errors?.needsSpecial">
+                <span *ngIf="form.controls['password']?.errors?.needsSpecial">
                     <i>*Password must include at least 1 special character.</i>
                 </span>
-                <span *ngIf="password?.errors?.needsUpper">
+                <span *ngIf="form.controls['password']?.errors?.needsUpper">
                     <i>*Password must include at least 1 upper case letter.</i>
                 </span>
             </div>
